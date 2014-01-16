@@ -1,33 +1,31 @@
 <% provide(:title,'Sign up') %>
 <div class="row">
 
-  <div class="col-xs12 col-sm-4 col-sm-offset-4 ">
-  	<h1>Sign up</h1>
-  	<hr>
+  <div class="col-xs12 col-sm-4 col-sm-offset-4 well">
+  	<legend><i class="fa fa-user"></i> Sign up!</legend>
 
   	<%= form_for @user, html: { role: "form"} do |f| %>
   	<%= render 'shared/error_messages' %>
 	  	<div class="form-group">
-		  	<%= f.label :name %>
-		  	<%= f.text_field :name, class: "form-control" %>
+		  	<%= f.text_field :name, class: "form-control", placeholder: 'Full Name' %>
 	  	</div>
 
 	  	<div class="form-group">
-		  	<%= f.label :email %>
-		    <%= f.text_field :email, class: "form-control" %>
+		  	
+		    <%= f.text_field :email, class: "form-control", placeholder: "Email" %>
 	  	</div>
 
 	  	<div class="form-group">
-		    <%= f.label :password %>
-		    <%= f.password_field :password, class: "form-control" %>
+		    
+		    <%= f.password_field :password, class: "form-control", placeholder: "Password" %>
 		  </div>
 
 		  <div class="form-group">
-		    <%= f.label :password_confirmation, "Confirm Password" %>
-		    <%= f.password_field :password_confirmation, class: "form-control" %>
+		    <%#= f.label :password_confirmation, "Confirm Password" %>
+		    <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Confirm Password" %>
 		  </div>
 
-    <%= f.submit "Create my account", class: "btn btn-lg btn-primary btn-block" %>
+    <%= f.submit "Create my account", class: "btn btn-custom btn-block" %>
     <% end %>
 
   </div>
