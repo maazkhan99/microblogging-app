@@ -5,7 +5,7 @@
   	<legend><i class="fa fa-edit"></i> Update your profile</legend>
 
   	<%= form_for @user, html: { role: "form"} do |f| %>
-  	<%= render 'shared/error_messages' %>
+  	<%= render 'shared/error_messages', object: f.object %>
 	  	<div class="form-group">
 		  	<%= f.label :name %>
 		  	<%= f.text_field :name, class: "form-control" %>
