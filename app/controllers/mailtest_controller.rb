@@ -1,8 +1,8 @@
 class MailtestController < ApplicationController
 
 	def pic
-		@count = 1
-		redirect_to ("http://google.com")
+		@count = count + 1
+		render count
 	end
 
 	def count
