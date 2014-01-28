@@ -1,7 +1,7 @@
 class MailtestController < ApplicationController
-
+	@c = 0
 	def pic
-		@count += 1
+		@c = 1
 		render 'count'
 	end
 
