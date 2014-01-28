@@ -4,4 +4,7 @@ class MailtestController < ApplicationController
 		@count = 1
 		redirect_to ("http://google.com")
 	end
+
+	def count
+	end
 end
